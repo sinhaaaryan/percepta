@@ -1,4 +1,4 @@
-# Nightingale, verified
+# Nightingale, verified with Lean 4
 
 A nurse scheduling backend modeled on Percepta's *Nightingale* ([Building the AI-native hospital](https://www.percepta.ai/blog/building-the-ai-native-hospital)). **No schedule can be published until Lean has proven it valid.**
 
@@ -32,7 +32,7 @@ React grid ──► FastAPI ──► CP-SAT solver (untrusted)
 
 All proofs build with no `sorry`. They use only the standard axioms (`propext`, `Quot.sound`); a test checks this.
 
-## Did it work? Measured results (this repo, demo data)
+## Measured results (this repo, demo data)
 
 Demo data: 90 staff nurses plus 12 agency nurses, 3 units, 28 days (Oct 19 – Nov 15, 2026, which crosses the DST change), 168 shifts, availability blocks including the blog's "can't work Mon/Wed for 3 weeks".
 
