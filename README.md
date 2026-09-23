@@ -1,6 +1,6 @@
 # Nightingale, verified with Lean 4
 
-A nurse scheduling backend modeled on Percepta's *Nightingale* ([Building the AI-native hospital](https://www.percepta.ai/blog/building-the-ai-native-hospital)). **No schedule can be published until Lean has proven it valid.**
+A nurse scheduling backend modeled on Percepta's *Nightingale* from the public blog post ([Building the AI-native hospital](https://www.percepta.ai/blog/building-the-ai-native-hospital)). **No schedule can be published until Lean has proven it valid.**
 
 - **Optimizer (untrusted):** OR-Tools CP-SAT balances coverage, skill mix, seniority, preferences, a karma-based fairness score, stable weekly patterns, and agency cost.
 - **Judge (Lean 4):** `Spec.lean` states the hard rules. A checker is **proven** to accept exactly the schedules the spec allows (`check_iff`). Every draft is checked, and publishing requires a Lean certificate stored with the schedule.
