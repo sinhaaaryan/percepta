@@ -1,0 +1,11 @@
+# Optional: PostgreSQL for local development (the app itself runs natively; see README).
+services:
+  db:
+    image: postgres:16
+    environment:
+      POSTGRES_USER: nightingale
+      POSTGRES_PASSWORD: nightingale
+      POSTGRES_DB: nightingale
+    ports: ["5432:5432"]
+    volumes:
+      - ./backend/sql/create_test_db.sql:/docker-entrypoint-initdb.d/01-test-db.sql:ro
